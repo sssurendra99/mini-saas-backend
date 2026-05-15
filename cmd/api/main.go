@@ -1,24 +1,22 @@
 package main
 
 import (
-    "log"
-    "net/http"
+	"log"
+	"net/http"
 )
 
-func main(){
+func main() {
 
-    
+	mux := http.NewServeMux()
 
-    mux := http.NewServeMux()
+	server := &http.Server{
+		Addr:    ":9000",
+		Handler: mux,
+	}
 
-    server := &http.Server{
-        Addr: ":9000",
-        Handler: mux,
-    }
-    
-    log.Println("Server running on http://localhost:9000")
+	log.Println("Server running on http://localhost:9000")
 
-    if err := server.ListenAndServe() ; err != nil {
-        log.Fatal(err)
-    }
+	if err := server.ListenAndServe(); err != nil {
+		log.Fatal(err)
+	}
 }
