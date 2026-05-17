@@ -1,0 +1,21 @@
+package service
+
+import (
+	"github.com/sssurendra99/mini-saas-backend/internal/domain"
+	"github.com/sssurendra99/mini-saas-backend/internal/repository"
+)
+
+
+type TaskService struct{
+	repo *repository.TaskRepository
+}
+
+func NewTaskService(tr *repository.TaskRepository) *TaskService {
+	return &TaskService{
+		repo: tr,
+	}
+}
+
+func (s *TaskService) GetAllTasks() ([]domain.Task, error){
+	return s.repo.GetAll()
+}

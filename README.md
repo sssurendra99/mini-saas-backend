@@ -27,6 +27,7 @@ https://github.com/joho/godotenv
 github.com/google/uuid
 ```
 - When creating the repository, I thought rather than creating three repositories for taks, project and user it's easier to create a generic repository much easier. (Learning curve is somewhat big so skipping this for now.)
+- Had to think about whether should I put the dependency injection in the main.go or should I just create another module for that specifically, if that's the case it will be must more organised. (Proceeding with this thought.)
 
 
 
@@ -39,6 +40,8 @@ github.com/google/uuid
 ```bash
 gofmt -s -w .
 ```
+- constructors are public not private in golang. 
+
 
 ## Things to look Later.
 

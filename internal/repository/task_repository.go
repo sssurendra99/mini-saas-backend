@@ -22,7 +22,7 @@ func (r *TaskRepository) GetAll() ([]domain.Task, error) {
 
 	rows, err := r.dbConnection.Query(
 		context.Background(),
-		"SELECT * FROM tasks",
+		"SELECT id, title, completed, user_id FROM tasks;",
 	)
 
 	if err != nil {
