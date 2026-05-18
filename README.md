@@ -28,7 +28,7 @@ github.com/google/uuid
 ```
 - When creating the repository, I thought rather than creating three repositories for taks, project and user it's easier to create a generic repository much easier. (Learning curve is somewhat big so skipping this for now.)
 - Had to think about whether should I put the dependency injection in the main.go or should I just create another module for that specifically, if that's the case it will be must more organised. (Proceeding with this thought.)
-
+- I am trying to build a logging middleware. - Understanding the what a middleware is important, also need to understand what are the things I'm logging in(what kind of metrics: http method, status code, url, Latency/Duration, Response size etc.)
 
 
 ## Things understood

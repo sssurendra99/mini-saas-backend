@@ -6,9 +6,9 @@ import (
 	"github.com/sssurendra99/mini-saas-backend/internal/service"
 )
 
-func BuildTaskModule(db *pgxpool.Pool) *TaskHandler{
+func BuildTaskModule(db *pgxpool.Pool) *TaskHandler {
 	repo := repository.NewTaskRepository(db)
 	service := service.NewTaskService(repo)
 	handler := NewTaskHandler(service)
-	return handler	
+	return handler
 }

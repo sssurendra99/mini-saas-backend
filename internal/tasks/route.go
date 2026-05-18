@@ -7,6 +7,7 @@ import (
 func RegisterRoutes(
 	mux *http.ServeMux,
 	taskHandler *TaskHandler,
-){
+) {
 	mux.HandleFunc("/tasks", taskHandler.GetAllTasks)
+	mux.HandleFunc("/tasks/{id}", taskHandler.GetTaskById)
 }
